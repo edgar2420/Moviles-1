@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.MainActivity">
+
+    <Button
+        android:id="@+id/btnVentas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Ventas"
+        app:layout_constraintEnd_toStartOf="@+id/btnCategoria"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="632dp" />
+
+    <Button
+        android:id="@+id/btnProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Producto"
+        app:layout_constraintEnd_toStartOf="@+id/btnVentas"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="632dp" />
+
+    <Button
+        android:id="@+id/btnCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categoria"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="260dp"
+        tools:layout_editor_absoluteY="632dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

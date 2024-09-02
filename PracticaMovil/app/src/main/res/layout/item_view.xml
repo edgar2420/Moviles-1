@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/rounded_corner"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/titleoutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <CheckBox
+        android:id="@+id/descriptionoutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleoutput"
+        android:textColor="#393939" />
+
+    <TextView
+        android:id="@+id/timeoutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptionoutput"
+        android:gravity="end"
+        android:textColor="#858484"
+        android:textSize="12dp"
+        tools:text="ABRIL 13 2023 " />
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginBottom="10dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/txtTitlee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        tools:text="Mi Nota" />
+
+    <TextView
+        android:id="@+id/txtDescrip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTitlee"
+        android:textColor="#393939"
+        tools:text="Descripcion de la nota" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDescrip"
+        android:gravity="end"
+        android:textColor="#858484"
+        android:textSize="12dp"
+        tools:text="Abril 13 2023 " />
+
+</RelativeLayout>
