@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DrawerAppearance" parent="Theme.Noter">
+        <item name="colorPrimary">@color/gold</item>
+        <item name="colorSurface">?android:attr/colorBackground</item>
+        <item name="colorControlHighlight">@color/gold</item>
+    </style>
+    <style name="TitleAppearance" parent="Theme.Noter">
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="DialogAppearance" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="colorControlActivated">@color/gold</item>
+        <item name="colorPrimary">@color/gold</item>
+    </style>
+    <style name="BottomAppBarAppearance" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:colorPrimary">@color/white</item>
+    </style>
+</resources>

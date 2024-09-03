@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="100dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/namev"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@string/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Test"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="288dp"
+        android:text="@string/test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="100dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/contra"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="100dp"
+        android:ems="10"
+        android:hint="@string/correov"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        android:autofillHints="" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

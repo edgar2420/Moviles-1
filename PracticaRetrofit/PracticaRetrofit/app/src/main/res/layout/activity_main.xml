@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lstPosts"
+        android:layout_width="413dp"
+        android:layout_height="420dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabInsertPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <Button
+        android:id="@+id/btnProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="Producto"
+        app:layout_constraintEnd_toStartOf="@+id/btnCategoria"
+        tools:layout_editor_absoluteY="491dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="Categoria"
+        app:layout_constraintEnd_toStartOf="@+id/btnVentas"
+        tools:layout_editor_absoluteY="491dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnVentas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="Ventas"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="491dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

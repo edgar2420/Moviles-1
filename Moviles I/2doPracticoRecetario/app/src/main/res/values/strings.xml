@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">2doPracticoRecetario</string>
+    <string name="btnIngerdiente">btn</string>
+    <string name="todo">TODO</string>
+    <string name="button">Button</string>
+    <string name="buscar">buscar</string>
+</resources>

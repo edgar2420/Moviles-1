@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PracticaRecursos</string>
+    <string name="lbl_hola_mundo">Hello world test</string>
+    <string name="lblChaumundo">Bye world</string>
+</resources>

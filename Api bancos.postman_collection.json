@@ -1,0 +1,585 @@
+{
+	"info": {
+		"_postman_id": "a59713d8-fe0a-4a10-9646-ff5b1dddcb24",
+		"name": "Api bancos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6777473"
+	},
+	"item": [
+		{
+			"name": "Beneficiarios",
+			"item": [
+				{
+					"name": "Get lista de beneficiarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{TOKEN_CLIENTE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL_PRINCIPAL}}/api/recipients",
+							"host": [
+								"{{URL_PRINCIPAL}}"
+							],
+							"path": [
+								"api",
+								"recipients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar beneficiario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{TOKEN_CLIENTE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": \"9d9a6fcf-bc45-49b1-b128-0460f119d771\",\r\n    \"ci\": \"456123456\",\r\n    \"nombreCompleto\": \"Pepe Pecas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_PRINCIPAL}}/api/recipients",
+							"host": [
+								"{{URL_PRINCIPAL}}"
+							],
+							"path": [
+								"api",
+								"recipients"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "QR",
+			"item": [
+				{
+					"name": "Generar qr",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{TOKEN_CLIENTE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"monto\": \"100\",\r\n    \"cuentaDestino\": 130,\r\n    \"fechaLimite\": \"2023-06-07\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_PRINCIPAL}}/api/qr/generate",
+							"host": [
+								"{{URL_PRINCIPAL}}"
+							],
+							"path": [
+								"api",
+								"qr",
+								"generate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pagar qr",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{TOKEN_CLIENTE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": \"a8e16ee1-ff85-402d-be87-7c55320d75bc\",\r\n    \"cuentaOrigen\": \"131\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_PRINCIPAL}}/api/qr/pay",
+							"host": [
+								"{{URL_PRINCIPAL}}"
+							],
+							"path": [
+								"api",
+								"qr",
+								"pay"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "Get lista de cuentas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL_PRINCIPAL}}/api/accounts",
+							"host": [
+								"{{URL_PRINCIPAL}}"
+							],
+							"path": [
+								"api",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar cuenta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL_PRINCIPAL}}/api/accounts",
+							"host": [
+								"{{URL_PRINCIPAL}}"
+							],
+							"path": [
+								"api",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ingreso",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{TOKEN_CLIENTE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Autho",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descripcion\": \"Pa tu chicle\",\r\n    \"monto\": 200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_PRINCIPAL}}/api/accounts/131/income",
+							"host": [
+								"{{URL_PRINCIPAL}}"
+							],
+							"path": [
+								"api",
+								"accounts",
+								"131",
+								"income"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Extracto de cuenta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{TOKEN_CLIENTE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL_PRINCIPAL}}/api/accounts/130statement",
+							"host": [
+								"{{URL_PRINCIPAL}}"
+							],
+							"path": [
+								"api",
+								"accounts",
+								"130statement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Egreso",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{TOKEN_CLIENTE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descripcion\": \"2 empanadas\",\r\n    \"monto\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_PRINCIPAL}}/api/accounts/130/expense",
+							"host": [
+								"{{URL_PRINCIPAL}}"
+							],
+							"path": [
+								"api",
+								"accounts",
+								"130",
+								"expense"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transferencia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{TOKEN_CLIENTE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descripcion\": \"te paso el cambio\",\r\n    \"monto\": 5,\r\n    \"cuentaOrigen\": \"130\",\r\n    \"beneficiario\": 49\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_PRINCIPAL}}/api/accounts/transfer",
+							"host": [
+								"{{URL_PRINCIPAL}}"
+							],
+							"path": [
+								"api",
+								"accounts",
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autenticación",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreCompleto\": \"Juan Perez\",\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"123456\",\r\n    \"ci\": \"123546\",\r\n    \"fechaNacimiento\": \"2000-01-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_PRINCIPAL}}/api/register",
+							"host": [
+								"{{URL_PRINCIPAL}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login usuario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"if(jsonData.access_token){\r",
+									"    pm.collectionVariables.set(\"access_token\", jsonData.access_token);\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_PRINCIPAL}}/api/login",
+							"host": [
+								"{{URL_PRINCIPAL}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sucursales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_PRINCIPAL}}/api/branches",
+					"host": [
+						"{{URL_PRINCIPAL}}"
+					],
+					"path": [
+						"api",
+						"branches"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL_PRINCIPAL",
+			"value": "http://apibancomoviles1.jmacboy.com",
+			"type": "string"
+		},
+		{
+			"key": "access_token",
+			"value": ""
+		}
+	]
+}

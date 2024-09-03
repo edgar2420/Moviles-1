@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PracticaListaPersonas</string>
+    <string-array name="genero_options">
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>Indefinido</item>
+    </string-array>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PracticaRecursos</string>
+    <string name="lbl_hola_mundo">Hola Mundo test</string>
+    <string name="lblChaumundo">Chau mundo</string>
+</resources>

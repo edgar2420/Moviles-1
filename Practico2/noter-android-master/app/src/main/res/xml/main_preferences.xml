@@ -1,0 +1,44 @@
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:key="general"
+        app:title="@string/general">
+
+        <ListPreference
+            app:key="recycler_view_preference"
+            app:iconSpaceReserved="false"
+            app:title="List Columns"
+            app:dialogTitle="Choose the list columns"
+            app:summary="%s"
+            app:entries="@array/recycler_view_entries"
+            app:entryValues="@array/recycler_view_values"
+            app:defaultValue="@string/count_2"/>
+
+        <ListPreference
+            app:key="theme_preference"
+            app:iconSpaceReserved="false"
+            app:title="@string/theme"
+            app:entries="@array/theme_entries"
+            app:entryValues="@array/theme_entry_values"
+            app:dialogTitle="@string/select_theme"
+            app:summary="%s"
+            app:defaultValue="@string/system_default"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:key="about"
+        app:title="@string/about">
+
+        <Preference
+            app:key="version"
+            app:title="Build version"
+            app:iconSpaceReserved="false"
+            app:summary="1.0"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

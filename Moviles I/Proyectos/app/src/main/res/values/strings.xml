@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PracticaHolaMundo</string>
+    <string name="test">Test</string>
+    <string name="name">Name</string>
+    <string name="namev">Nombre</string>
+    <string name="contra">Contraseña</string>
+    <string name="correov">Correo</string>
+</resources>

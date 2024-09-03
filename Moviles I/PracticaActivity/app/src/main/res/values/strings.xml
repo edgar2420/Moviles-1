@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PracticaActivity</string>
+    <string name="ir_al_segundo_activity">ir al segundo activity</string>
+    <string name="btnSendInfo">Button</string>
+    <string name="txtUsername">Name</string>
+    <string name="username">username</string>
+    <string name="textview">Bienvenido</string>
+</resources>
